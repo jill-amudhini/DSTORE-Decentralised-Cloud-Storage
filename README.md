@@ -7,5 +7,5 @@ including high operational costs, data availability, and data security. Blockcha
 
 ## PROPOSED ARCHITECTURE
 
-![Architecture](https://user-images.githubusercontent.com/68860525/149824887-2e188aaf-ca8c-4364-b811-fdffce1a4ffb.PNG)
+![Architecture](https://github.com/jill-amudhini/DSTORE-Decentralised-Cloud-Storage/blob/main/Screenshots/SystemArchitecture.png)
 
