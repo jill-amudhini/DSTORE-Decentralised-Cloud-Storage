@@ -40,6 +40,23 @@ cd client
 npm start
 ```
 
+## <b>Screenshots</b>
+
+### Home Page
+<p align="center"><img src="https://github.com/jill-amudhini/DSTORE-Decentralised-Cloud-Storage/blob/main/Screenshots/HomePage.png" width=80% height=80%></p>
+
+### Login Page
+<p align="center"><img src="https://github.com/jill-amudhini/DSTORE-Decentralised-Cloud-Storage/blob/main/Screenshots/LoginPage.png" width=80% height=80%></p>
+
+### Dashboard
+<p align="center"><img src="https://github.com/jill-amudhini/DSTORE-Decentralised-Cloud-Storage/blob/main/Screenshots/Dashboard.png" width=80% height=80%></p>
+
+### File Upload Page
+<p align="center"><img src="https://github.com/jill-amudhini/DSTORE-Decentralised-Cloud-Storage/blob/main/Screenshots/FileUploadPage.png" width=80% height=80%></p>
+
+### Contact Us Page
+<p align="center"><img src="https://github.com/jill-amudhini/DSTORE-Decentralised-Cloud-Storage/blob/main/Screenshots/ContactUsPage.png" width=80% height=80%></p>
+
 ## <b>Conclusion</b>
 The proposed system enhances the security of data by encrypting and distributing the data across multiple peers in the system. The implemented system encrypts data using the AES 256 bit encryption technique, assuring the privacy of the user's data. The IPFS protocol is then used to distribute and store encrypted data among network peers. The system not only addresses the privacy and security issues associated with centralized cloud storage, but also provides a platform for peers to rent out underused storage and earn cryptocurrency in exchange, increasing storage resource usage.
 
