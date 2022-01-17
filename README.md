@@ -7,18 +7,18 @@ including high operational costs, data availability, and data security. Blockcha
 
 ## <b>Proposed Architecture</b>
 
-<img src="https://github.com/jill-amudhini/DSTORE-Decentralised-Cloud-Storage/blob/main/Screenshots/SystemArchitecture.png" width=75% height=75%>
+<p align="center"><img src="https://github.com/jill-amudhini/DSTORE-Decentralised-Cloud-Storage/blob/main/Screenshots/SystemArchitecture.png" width=75% height=75%></p>
 
 ## <b>Tools and Technology</b>
-- VSCode
-- React JS
-- Html
-- CSS
 - Ethereum
+- Solidity
 - Truffle
 - Ganache
 - Metamask
-- Solidity
+- React JS
+- Html
+- CSS
+- VSCode
 
 
 ## <b>Steps to run in Localhost</b>
