@@ -1,0 +1,1238 @@
+{
+  "contractName": "LoginInfo",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "userMapping",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "username",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "email",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_usraddr",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "email",
+          "type": "string"
+        }
+      ],
+      "name": "registerUser",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_usraddr",
+          "type": "address"
+        }
+      ],
+      "name": "getUser",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "username",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "email",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct LoginInfo.userStruct",
+          "name": "_userStruct",
+          "type": "tuple"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_usraddr\",\"type\":\"address\"}],\"name\":\"getUser\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"username\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"}],\"internalType\":\"struct LoginInfo.userStruct\",\"name\":\"_userStruct\",\"type\":\"tuple\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_usraddr\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"}],\"name\":\"registerUser\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"userMapping\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"username\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/LoginInfo.sol\":\"LoginInfo\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/LoginInfo.sol\":{\"keccak256\":\"0x206ea1e0156a9edaa543ba89a35189a6811ee879ef4bf917334f262653bb834c\",\"urls\":[\"bzz-raw://182a29e63f205b9322068225b42c29a8c67ca9612ba6207c41122bdac5db65b0\",\"dweb:/ipfs/QmcJQuRx9KCQSyxT2JEiP9tDJLa872FdYFNP7mGBEhMJXj\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061088c806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063118b9535146100465780636f77926b14610077578063db0c87c9146100a7575b600080fd5b610060600480360361005b9190810190610570565b6100c3565b60405161006e9291906106ce565b60405180910390f35b610091600480360361008c9190810190610570565b610217565b60405161009e9190610705565b60405180910390f35b6100c160048036036100bc9190810190610599565b6103b3565b005b6000602052806000526040600020600091509050806000018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561016f5780601f106101445761010080835404028352916020019161016f565b820191906000526020600020905b81548152906001019060200180831161015257829003601f168201915b505050505090806001018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561020d5780601f106101e25761010080835404028352916020019161020d565b820191906000526020600020905b8154815290600101906020018083116101f057829003601f168201915b5050505050905082565b61021f610448565b6000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020604051806040016040529081600082018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103015780601f106102d657610100808354040283529160200191610301565b820191906000526020600020905b8154815290600101906020018083116102e457829003601f168201915b50505050508152602001600182018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103a35780601f10610378576101008083540402835291602001916103a3565b820191906000526020600020905b81548152906001019060200180831161038657829003601f168201915b5050505050815250509050919050565b6040518060400160405280838152602001828152506000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000820151816000019080519060200190610422929190610462565b50602082015181600101908051906020019061043f929190610462565b50905050505050565b604051806040016040528060608152602001606081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106104a357805160ff19168380011785556104d1565b828001600101855582156104d1579182015b828111156104d05782518255916020019190600101906104b5565b5b5090506104de91906104e2565b5090565b61050491905b808211156105005760008160009055506001016104e8565b5090565b90565b60008135905061051681610832565b92915050565b600082601f83011261052d57600080fd5b813561054061053b82610754565b610727565b9150808252602083016020830185838301111561055c57600080fd5b6105678382846107df565b50505092915050565b60006020828403121561058257600080fd5b600061059084828501610507565b91505092915050565b6000806000606084860312156105ae57600080fd5b60006105bc86828701610507565b935050602084013567ffffffffffffffff8111156105d957600080fd5b6105e58682870161051c565b925050604084013567ffffffffffffffff81111561060257600080fd5b61060e8682870161051c565b9150509250925092565b600061062382610780565b61062d818561078b565b935061063d8185602086016107ee565b61064681610821565b840191505092915050565b600061065c82610780565b610666818561079c565b93506106768185602086016107ee565b61067f81610821565b840191505092915050565b600060408301600083015184820360008601526106a78282610618565b915050602083015184820360208601526106c18282610618565b9150508091505092915050565b600060408201905081810360008301526106e88185610651565b905081810360208301526106fc8184610651565b90509392505050565b6000602082019050818103600083015261071f818461068a565b905092915050565b6000604051905081810181811067ffffffffffffffff8211171561074a57600080fd5b8060405250919050565b600067ffffffffffffffff82111561076b57600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b600082825260208201905092915050565b600082825260208201905092915050565b60006107b8826107bf565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b82818337600083830152505050565b60005b8381101561080c5780820151818401526020810190506107f1565b8381111561081b576000848401525b50505050565b6000601f19601f8301169050919050565b61083b816107ad565b811461084657600080fd5b5056fea365627a7a72315820ba5a5ba3f1817e9b36c9fc3c90cc084032d192aabe7851fc5afd954a66bab3d66c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c8063118b9535146100465780636f77926b14610077578063db0c87c9146100a7575b600080fd5b610060600480360361005b9190810190610570565b6100c3565b60405161006e9291906106ce565b60405180910390f35b610091600480360361008c9190810190610570565b610217565b60405161009e9190610705565b60405180910390f35b6100c160048036036100bc9190810190610599565b6103b3565b005b6000602052806000526040600020600091509050806000018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561016f5780601f106101445761010080835404028352916020019161016f565b820191906000526020600020905b81548152906001019060200180831161015257829003601f168201915b505050505090806001018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561020d5780601f106101e25761010080835404028352916020019161020d565b820191906000526020600020905b8154815290600101906020018083116101f057829003601f168201915b5050505050905082565b61021f610448565b6000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020604051806040016040529081600082018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103015780601f106102d657610100808354040283529160200191610301565b820191906000526020600020905b8154815290600101906020018083116102e457829003601f168201915b50505050508152602001600182018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103a35780601f10610378576101008083540402835291602001916103a3565b820191906000526020600020905b81548152906001019060200180831161038657829003601f168201915b5050505050815250509050919050565b6040518060400160405280838152602001828152506000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000820151816000019080519060200190610422929190610462565b50602082015181600101908051906020019061043f929190610462565b50905050505050565b604051806040016040528060608152602001606081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106104a357805160ff19168380011785556104d1565b828001600101855582156104d1579182015b828111156104d05782518255916020019190600101906104b5565b5b5090506104de91906104e2565b5090565b61050491905b808211156105005760008160009055506001016104e8565b5090565b90565b60008135905061051681610832565b92915050565b600082601f83011261052d57600080fd5b813561054061053b82610754565b610727565b9150808252602083016020830185838301111561055c57600080fd5b6105678382846107df565b50505092915050565b60006020828403121561058257600080fd5b600061059084828501610507565b91505092915050565b6000806000606084860312156105ae57600080fd5b60006105bc86828701610507565b935050602084013567ffffffffffffffff8111156105d957600080fd5b6105e58682870161051c565b925050604084013567ffffffffffffffff81111561060257600080fd5b61060e8682870161051c565b9150509250925092565b600061062382610780565b61062d818561078b565b935061063d8185602086016107ee565b61064681610821565b840191505092915050565b600061065c82610780565b610666818561079c565b93506106768185602086016107ee565b61067f81610821565b840191505092915050565b600060408301600083015184820360008601526106a78282610618565b915050602083015184820360208601526106c18282610618565b9150508091505092915050565b600060408201905081810360008301526106e88185610651565b905081810360208301526106fc8184610651565b90509392505050565b6000602082019050818103600083015261071f818461068a565b905092915050565b6000604051905081810181811067ffffffffffffffff8211171561074a57600080fd5b8060405250919050565b600067ffffffffffffffff82111561076b57600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b600082825260208201905092915050565b600082825260208201905092915050565b60006107b8826107bf565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b82818337600083830152505050565b60005b8381101561080c5780820151818401526020810190506107f1565b8381111561081b576000848401525b50505050565b6000601f19601f8301169050919050565b61083b816107ad565b811461084657600080fd5b5056fea365627a7a72315820ba5a5ba3f1817e9b36c9fc3c90cc084032d192aabe7851fc5afd954a66bab3d66c6578706572696d656e74616cf564736f6c63430005100040",
+  "sourceMap": "97:470:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;97:470:1;;;;;;;",
+  "deployedSourceMap": "97:470:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;97:470:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;204:50;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;428:134;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;263:157;;;;;;;;;;;;;;;;:::i;:::-;;204:50;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;428:134::-;484:29;;:::i;:::-;533:11;:21;545:8;533:21;;;;;;;;;;;;;;;526:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;428:134;;;:::o;263:157::-;390:22;;;;;;;;401:4;390:22;;;;406:5;390:22;;;368:11;:21;380:8;368:21;;;;;;;;;;;;;;;:44;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;263:157;;;:::o;97:470::-;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;5:130:-1:-;;85:6;72:20;63:29;;97:33;124:5;97:33;;;57:78;;;;;143:442;;245:3;238:4;230:6;226:17;222:27;212:2;;263:1;260;253:12;212:2;300:6;287:20;322:65;337:49;379:6;337:49;;;322:65;;;313:74;;407:6;400:5;393:21;443:4;435:6;431:17;476:4;469:5;465:16;511:3;502:6;497:3;493:16;490:25;487:2;;;528:1;525;518:12;487:2;538:41;572:6;567:3;562;538:41;;;205:380;;;;;;;;593:241;;697:2;685:9;676:7;672:23;668:32;665:2;;;713:1;710;703:12;665:2;748:1;765:53;810:7;801:6;790:9;786:22;765:53;;;755:63;;727:97;659:175;;;;;841:703;;;;999:2;987:9;978:7;974:23;970:32;967:2;;;1015:1;1012;1005:12;967:2;1050:1;1067:53;1112:7;1103:6;1092:9;1088:22;1067:53;;;1057:63;;1029:97;1185:2;1174:9;1170:18;1157:32;1209:18;1201:6;1198:30;1195:2;;;1241:1;1238;1231:12;1195:2;1261:63;1316:7;1307:6;1296:9;1292:22;1261:63;;;1251:73;;1136:194;1389:2;1378:9;1374:18;1361:32;1413:18;1405:6;1402:30;1399:2;;;1445:1;1442;1435:12;1399:2;1465:63;1520:7;1511:6;1500:9;1496:22;1465:63;;;1455:73;;1340:194;961:583;;;;;;1551:319;;1649:35;1678:5;1649:35;;;1696:61;1750:6;1745:3;1696:61;;;1689:68;;1762:52;1807:6;1802:3;1795:4;1788:5;1784:16;1762:52;;;1835:29;1857:6;1835:29;;;1830:3;1826:39;1819:46;;1629:241;;;;;;1877:339;;1985:35;2014:5;1985:35;;;2032:71;2096:6;2091:3;2032:71;;;2025:78;;2108:52;2153:6;2148:3;2141:4;2134:5;2130:16;2108:52;;;2181:29;2203:6;2181:29;;;2176:3;2172:39;2165:46;;1965:251;;;;;;2288:646;;2441:4;2436:3;2432:14;2528:4;2521:5;2517:16;2511:23;2580:3;2574:4;2570:14;2563:4;2558:3;2554:14;2547:38;2600:69;2664:4;2650:12;2600:69;;;2592:77;;2461:220;2755:4;2748:5;2744:16;2738:23;2807:3;2801:4;2797:14;2790:4;2785:3;2781:14;2774:38;2827:69;2891:4;2877:12;2827:69;;;2819:77;;2691:217;2925:4;2918:11;;2414:520;;;;;;2941:484;;3119:2;3108:9;3104:18;3096:26;;3169:9;3163:4;3159:20;3155:1;3144:9;3140:17;3133:47;3194:74;3263:4;3254:6;3194:74;;;3186:82;;3316:9;3310:4;3306:20;3301:2;3290:9;3286:18;3279:48;3341:74;3410:4;3401:6;3341:74;;;3333:82;;3090:335;;;;;;3432:365;;3602:2;3591:9;3587:18;3579:26;;3652:9;3646:4;3642:20;3638:1;3627:9;3623:17;3616:47;3677:110;3782:4;3773:6;3677:110;;;3669:118;;3573:224;;;;;3804:256;;3866:2;3860:9;3850:19;;3904:4;3896:6;3892:17;4003:6;3991:10;3988:22;3967:18;3955:10;3952:34;3949:62;3946:2;;;4024:1;4021;4014:12;3946:2;4044:10;4040:2;4033:22;3844:216;;;;;4067:322;;4211:18;4203:6;4200:30;4197:2;;;4243:1;4240;4233:12;4197:2;4310:4;4306:9;4299:4;4291:6;4287:17;4283:33;4275:41;;4374:4;4368;4364:15;4356:23;;4134:255;;;;4396:118;;4486:5;4480:12;4470:22;;4451:63;;;;4522:153;;4627:6;4622:3;4615:19;4664:4;4659:3;4655:14;4640:29;;4608:67;;;;;4684:163;;4799:6;4794:3;4787:19;4836:4;4831:3;4827:14;4812:29;;4780:67;;;;;4855:91;;4917:24;4935:5;4917:24;;;4906:35;;4900:46;;;;4953:121;;5026:42;5019:5;5015:54;5004:65;;4998:76;;;;5082:145;5163:6;5158:3;5153;5140:30;5219:1;5210:6;5205:3;5201:16;5194:27;5133:94;;;;5236:268;5301:1;5308:101;5322:6;5319:1;5316:13;5308:101;;;5398:1;5393:3;5389:11;5383:18;5379:1;5374:3;5370:11;5363:39;5344:2;5341:1;5337:10;5332:15;;5308:101;;;5424:6;5421:1;5418:13;5415:2;;;5489:1;5480:6;5475:3;5471:16;5464:27;5415:2;5285:219;;;;;5512:97;;5600:2;5596:7;5591:2;5584:5;5580:14;5576:28;5566:38;;5560:49;;;;5617:117;5686:24;5704:5;5686:24;;;5679:5;5676:35;5666:2;;5725:1;5722;5715:12;5666:2;5660:74;",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.21;\r\npragma experimental ABIEncoderV2;\r\n\r\ncontract LoginInfo {\r\n\r\n    struct userStruct {\r\n      string username;\r\n      string email;\r\n    }\r\n\r\n    mapping (address => userStruct) public userMapping;\r\n\r\n    function registerUser(address _usraddr, string memory name, string memory email) public \r\n    {\r\n        userMapping[_usraddr]=userStruct(name,email);\r\n    }\r\n\r\n    function getUser(address _usraddr) public view returns (userStruct memory _userStruct) {\r\n        return userMapping[_usraddr];\r\n    }\r\n\r\n}",
+  "sourcePath": "F:\\Blockchain\\PDC Final\\DStore-App\\contracts\\LoginInfo.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/LoginInfo.sol",
+    "exportedSymbols": {
+      "LoginInfo": [
+        129
+      ]
+    },
+    "id": 130,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 87,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:25:1"
+      },
+      {
+        "id": 88,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "60:33:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 129,
+        "linearizedBaseContracts": [
+          129
+        ],
+        "name": "LoginInfo",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "LoginInfo.userStruct",
+            "id": 93,
+            "members": [
+              {
+                "constant": false,
+                "id": 90,
+                "name": "username",
+                "nodeType": "VariableDeclaration",
+                "scope": 93,
+                "src": "152:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 89,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "152:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 92,
+                "name": "email",
+                "nodeType": "VariableDeclaration",
+                "scope": 93,
+                "src": "176:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 91,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "176:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "userStruct",
+            "nodeType": "StructDefinition",
+            "scope": 129,
+            "src": "125:71:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 97,
+            "name": "userMapping",
+            "nodeType": "VariableDeclaration",
+            "scope": 129,
+            "src": "204:50:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_userStruct_$93_storage_$",
+              "typeString": "mapping(address => struct LoginInfo.userStruct)"
+            },
+            "typeName": {
+              "id": 96,
+              "keyType": {
+                "id": 94,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "213:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "204:31:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_userStruct_$93_storage_$",
+                "typeString": "mapping(address => struct LoginInfo.userStruct)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 95,
+                "name": "userStruct",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 93,
+                "src": "224:10:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_userStruct_$93_storage_ptr",
+                  "typeString": "struct LoginInfo.userStruct"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 115,
+              "nodeType": "Block",
+              "src": "357:63:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 113,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 106,
+                        "name": "userMapping",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 97,
+                        "src": "368:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_userStruct_$93_storage_$",
+                          "typeString": "mapping(address => struct LoginInfo.userStruct storage ref)"
+                        }
+                      },
+                      "id": 108,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 107,
+                        "name": "_usraddr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 99,
+                        "src": "380:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "368:21:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_userStruct_$93_storage",
+                        "typeString": "struct LoginInfo.userStruct storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 110,
+                          "name": "name",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 101,
+                          "src": "401:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 111,
+                          "name": "email",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 103,
+                          "src": "406:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 109,
+                        "name": "userStruct",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 93,
+                        "src": "390:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_userStruct_$93_storage_ptr_$",
+                          "typeString": "type(struct LoginInfo.userStruct storage pointer)"
+                        }
+                      },
+                      "id": 112,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "390:22:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_userStruct_$93_memory",
+                        "typeString": "struct LoginInfo.userStruct memory"
+                      }
+                    },
+                    "src": "368:44:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_userStruct_$93_storage",
+                      "typeString": "struct LoginInfo.userStruct storage ref"
+                    }
+                  },
+                  "id": 114,
+                  "nodeType": "ExpressionStatement",
+                  "src": "368:44:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 116,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "registerUser",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 104,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 99,
+                  "name": "_usraddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 116,
+                  "src": "285:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 98,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "285:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 101,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 116,
+                  "src": "303:18:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 100,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "303:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 103,
+                  "name": "email",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 116,
+                  "src": "323:19:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 102,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "323:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "284:59:1"
+            },
+            "returnParameters": {
+              "id": 105,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "357:0:1"
+            },
+            "scope": 129,
+            "src": "263:157:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 127,
+              "nodeType": "Block",
+              "src": "515:47:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 123,
+                      "name": "userMapping",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 97,
+                      "src": "533:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_userStruct_$93_storage_$",
+                        "typeString": "mapping(address => struct LoginInfo.userStruct storage ref)"
+                      }
+                    },
+                    "id": 125,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 124,
+                      "name": "_usraddr",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 118,
+                      "src": "545:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "533:21:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_userStruct_$93_storage",
+                      "typeString": "struct LoginInfo.userStruct storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 122,
+                  "id": 126,
+                  "nodeType": "Return",
+                  "src": "526:28:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 128,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUser",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 119,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 118,
+                  "name": "_usraddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 128,
+                  "src": "445:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 117,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "445:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "444:18:1"
+            },
+            "returnParameters": {
+              "id": 122,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 121,
+                  "name": "_userStruct",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 128,
+                  "src": "484:29:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_userStruct_$93_memory_ptr",
+                    "typeString": "struct LoginInfo.userStruct"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 120,
+                    "name": "userStruct",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 93,
+                    "src": "484:10:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_userStruct_$93_storage_ptr",
+                      "typeString": "struct LoginInfo.userStruct"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "483:31:1"
+            },
+            "scope": 129,
+            "src": "428:134:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 130,
+        "src": "97:470:1"
+      }
+    ],
+    "src": "33:534:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/LoginInfo.sol",
+      "exportedSymbols": {
+        "LoginInfo": [
+          129
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".21"
+          ]
+        },
+        "id": 87,
+        "name": "PragmaDirective",
+        "src": "33:25:1"
+      },
+      {
+        "attributes": {
+          "literals": [
+            "experimental",
+            "ABIEncoderV2"
+          ]
+        },
+        "id": 88,
+        "name": "PragmaDirective",
+        "src": "60:33:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            129
+          ],
+          "name": "LoginInfo",
+          "scope": 130
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "LoginInfo.userStruct",
+              "name": "userStruct",
+              "scope": 129,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "username",
+                  "scope": 93,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 89,
+                    "name": "ElementaryTypeName",
+                    "src": "152:6:1"
+                  }
+                ],
+                "id": 90,
+                "name": "VariableDeclaration",
+                "src": "152:15:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "email",
+                  "scope": 93,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 91,
+                    "name": "ElementaryTypeName",
+                    "src": "176:6:1"
+                  }
+                ],
+                "id": 92,
+                "name": "VariableDeclaration",
+                "src": "176:12:1"
+              }
+            ],
+            "id": 93,
+            "name": "StructDefinition",
+            "src": "125:71:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "userMapping",
+              "scope": 129,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => struct LoginInfo.userStruct)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => struct LoginInfo.userStruct)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 94,
+                    "name": "ElementaryTypeName",
+                    "src": "213:7:1"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "userStruct",
+                      "referencedDeclaration": 93,
+                      "type": "struct LoginInfo.userStruct"
+                    },
+                    "id": 95,
+                    "name": "UserDefinedTypeName",
+                    "src": "224:10:1"
+                  }
+                ],
+                "id": 96,
+                "name": "Mapping",
+                "src": "204:31:1"
+              }
+            ],
+            "id": 97,
+            "name": "VariableDeclaration",
+            "src": "204:50:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "registerUser",
+              "scope": 129,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_usraddr",
+                      "scope": 116,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 98,
+                        "name": "ElementaryTypeName",
+                        "src": "285:7:1"
+                      }
+                    ],
+                    "id": 99,
+                    "name": "VariableDeclaration",
+                    "src": "285:16:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "name",
+                      "scope": 116,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 100,
+                        "name": "ElementaryTypeName",
+                        "src": "303:6:1"
+                      }
+                    ],
+                    "id": 101,
+                    "name": "VariableDeclaration",
+                    "src": "303:18:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "email",
+                      "scope": 116,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 102,
+                        "name": "ElementaryTypeName",
+                        "src": "323:6:1"
+                      }
+                    ],
+                    "id": 103,
+                    "name": "VariableDeclaration",
+                    "src": "323:19:1"
+                  }
+                ],
+                "id": 104,
+                "name": "ParameterList",
+                "src": "284:59:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 105,
+                "name": "ParameterList",
+                "src": "357:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct LoginInfo.userStruct storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct LoginInfo.userStruct storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 97,
+                                  "type": "mapping(address => struct LoginInfo.userStruct storage ref)",
+                                  "value": "userMapping"
+                                },
+                                "id": 106,
+                                "name": "Identifier",
+                                "src": "368:11:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 99,
+                                  "type": "address",
+                                  "value": "_usraddr"
+                                },
+                                "id": 107,
+                                "name": "Identifier",
+                                "src": "380:8:1"
+                              }
+                            ],
+                            "id": 108,
+                            "name": "IndexAccess",
+                            "src": "368:21:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "struct LoginInfo.userStruct memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 93,
+                                  "type": "type(struct LoginInfo.userStruct storage pointer)",
+                                  "value": "userStruct"
+                                },
+                                "id": 109,
+                                "name": "Identifier",
+                                "src": "390:10:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 101,
+                                  "type": "string memory",
+                                  "value": "name"
+                                },
+                                "id": 110,
+                                "name": "Identifier",
+                                "src": "401:4:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 103,
+                                  "type": "string memory",
+                                  "value": "email"
+                                },
+                                "id": 111,
+                                "name": "Identifier",
+                                "src": "406:5:1"
+                              }
+                            ],
+                            "id": 112,
+                            "name": "FunctionCall",
+                            "src": "390:22:1"
+                          }
+                        ],
+                        "id": 113,
+                        "name": "Assignment",
+                        "src": "368:44:1"
+                      }
+                    ],
+                    "id": 114,
+                    "name": "ExpressionStatement",
+                    "src": "368:44:1"
+                  }
+                ],
+                "id": 115,
+                "name": "Block",
+                "src": "357:63:1"
+              }
+            ],
+            "id": 116,
+            "name": "FunctionDefinition",
+            "src": "263:157:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getUser",
+              "scope": 129,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_usraddr",
+                      "scope": 128,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 117,
+                        "name": "ElementaryTypeName",
+                        "src": "445:7:1"
+                      }
+                    ],
+                    "id": 118,
+                    "name": "VariableDeclaration",
+                    "src": "445:16:1"
+                  }
+                ],
+                "id": 119,
+                "name": "ParameterList",
+                "src": "444:18:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_userStruct",
+                      "scope": 128,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "struct LoginInfo.userStruct",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "userStruct",
+                          "referencedDeclaration": 93,
+                          "type": "struct LoginInfo.userStruct"
+                        },
+                        "id": 120,
+                        "name": "UserDefinedTypeName",
+                        "src": "484:10:1"
+                      }
+                    ],
+                    "id": 121,
+                    "name": "VariableDeclaration",
+                    "src": "484:29:1"
+                  }
+                ],
+                "id": 122,
+                "name": "ParameterList",
+                "src": "483:31:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 122
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct LoginInfo.userStruct storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 97,
+                              "type": "mapping(address => struct LoginInfo.userStruct storage ref)",
+                              "value": "userMapping"
+                            },
+                            "id": 123,
+                            "name": "Identifier",
+                            "src": "533:11:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 118,
+                              "type": "address",
+                              "value": "_usraddr"
+                            },
+                            "id": 124,
+                            "name": "Identifier",
+                            "src": "545:8:1"
+                          }
+                        ],
+                        "id": 125,
+                        "name": "IndexAccess",
+                        "src": "533:21:1"
+                      }
+                    ],
+                    "id": 126,
+                    "name": "Return",
+                    "src": "526:28:1"
+                  }
+                ],
+                "id": 127,
+                "name": "Block",
+                "src": "515:47:1"
+              }
+            ],
+            "id": 128,
+            "name": "FunctionDefinition",
+            "src": "428:134:1"
+          }
+        ],
+        "id": 129,
+        "name": "ContractDefinition",
+        "src": "97:470:1"
+      }
+    ],
+    "id": 130,
+    "name": "SourceUnit",
+    "src": "33:534:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x093729a39A844Fda3149E4680ec53DA398A0aB0F",
+      "transactionHash": "0xb3fe4c673bd7a9868987075a92466abc672e9adb48afc948e5b34e03d51018da"
+    }
+  },
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-12-06T17:54:39.854Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,0 +1,137 @@
+.left{
+  width:50%;
+  height:100%;
+  padding:10px;
+  float:left;
+  }
+  
+  .right{
+  width:50%;
+  height:100%;
+  padding:10px;
+  float:right;
+  margin-top: 3%;
+  }
+
+.dcontainer{
+  font-family: Montserrat, sans-serif;
+  margin-top: 3%;
+  margin-left: 35%;
+  /* background: #231e39;
+  color: #b3b8cd; */
+  border-radius: 7px;
+  width: 500px;
+  height: 600px;
+  text-align: center;
+  box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.cover-photo{
+  background: url(https://images.unsplash.com/photo-1540228232483-1b64a7024923?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80);
+  height: 180px;
+  width: 500px;
+  border-radius: 7px;
+}
+.profile{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin: 103px 0 0 -200px;
+  border: 1px solid #1f1a32;
+  
+}
+.profile-name{
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 3%;
+  margin-left: 55%;
+  margin-right: 20%;
+  
+}
+.about{
+  font-size: 25px;
+  margin-top: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
+  line-height: 35px;
+  text-align:left;
+  overflow-wrap: break-word;
+  
+}
+
+.container i{
+  padding-left: 20px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: .5s;
+}
+.container i:hover{
+  color: #03bfbc;
+}
+
+.c-dashboardInfo {
+  margin-bottom: 5%;
+  margin-left: 10%;
+  width: 50%;
+  
+}
+.c-dashboardInfo .wrap {
+  background: #ffffff;
+  box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 25px 20px;
+  height: 100%;
+}
+.c-dashboardInfo__title,
+.c-dashboardInfo__subInfo {
+  color: #6c6c6c;
+  font-size: 1.18em;
+}
+.c-dashboardInfo span {
+  display: block;
+}
+.c-dashboardInfo__count {
+  font-weight: 600;
+  font-size: 2.5em;
+  line-height: 64px;
+  color: #323c43;
+}
+.c-dashboardInfo .wrap:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  content: "";
+}
+
+.c-dashboardInfo:nth-child(1) .wrap:after {
+  background: linear-gradient(81.67deg, #ff647c 0%, #1f5dc5 100%);
+}
+.c-dashboardInfo:nth-child(2) .wrap:after {
+  background: linear-gradient(81.67deg, #0084f4 0%, #1a4da2 100%);
+}
+.c-dashboardInfo:nth-child(3) .wrap:after {
+  background: linear-gradient(69.83deg, #0084f4 0%, #00c48c 100%);
+}
+.c-dashboardInfo:nth-child(4) .wrap:after {
+  background: linear-gradient(81.67deg, #ff647c 0%, #1f5dc5 100%);
+}
+.c-dashboardInfo__title svg {
+  color: #d7d7d7;
+  margin-left: 5px;
+}
+.MuiSvgIcon-root-19 {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 24px;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  user-select: none;
+  flex-shrink: 0;
+}

@@ -1,0 +1,42 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^4.17.2",
+    "crypto-js": "^4.1.1",
+    "emailjs-com": "^3.2.0",
+    "ipfs-api": "^26.1.2",
+    "react": "16.11.0",
+    "react-dom": "16.11.0",
+    "react-icons": "^4.3.1",
+    "react-modal": "^3.14.4",
+    "react-native": "^0.66.3",
+    "react-native-screens": "^3.10.0",
+    "react-navigation": "^4.4.4",
+    "react-router-dom": "^6.0.2",
+    "react-scripts": "3.2.0",
+    "web3": "1.2.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

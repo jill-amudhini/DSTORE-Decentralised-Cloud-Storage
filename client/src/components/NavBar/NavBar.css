@@ -1,0 +1,135 @@
+  
+  .navbar {
+    height: 10vh;
+    background: #1b1919;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar-logo {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 2.3rem;
+    display: flex;
+    align-items: center;
+    width: 9rem;
+    justify-content: space-between;
+    
+  }
+  
+  .nav-items {
+    width: 65vw;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+    
+    margin-top: 10px;
+  }
+  
+  .nav-item {
+    list-style: none;
+    margin-left: 2rem;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.2rem;
+    padding: 6px 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s all ease-out;
+  }
+  
+  .nav-item a:hover {
+    background: tomato;
+  }
+  
+  .nav-item a span {
+    margin-left: 0.7rem;
+    font-size: 1.3rem;
+  }
+  
+  .sidebar-toggle {
+    width: 65vw;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .sidebar-toggle-logo {
+    font-size: 2.3rem;
+    color: whitesmoke;
+    cursor: pointer;
+  }
+  
+  .sidebar {
+    width: 16rem;
+    background: #1b1919;
+    height: 90vh;
+    position: absolute;
+    top: 10vh;
+    left: -100%;
+    transition: 0.3s all ease-in-out;
+  }
+  
+  .sidebar.active {
+    left: 0;
+  }
+  
+  .sidebar-items {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.2s all ease-out;
+    
+  }
+  
+  .sidebar-item {
+    
+    list-style: none;
+    margin-top: 1rem;
+    width: 100%;
+    height: 3rem;
+    
+  }
+  
+  .sidebar-item a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s all ease-out;
+  }
+  
+  .sidebar-item a span {
+    margin-left: 1.5rem;
+    font-size: 1.4rem;
+  }
+  
+  .sidebar-item a:hover {
+    background: tomato;
+  }
+  
+  .sidebar .btn {
+    margin-top: 2.4rem;
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .sidebar.active {
+      width: 5rem;
+    }
+  
+    .sidebar-item a span {
+      display: none;
+    }
+  }

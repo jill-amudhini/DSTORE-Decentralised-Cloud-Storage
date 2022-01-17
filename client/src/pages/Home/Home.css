@@ -1,0 +1,112 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .intro-lead-in {
+    background-color:#fed136;
+    width: 44%;
+    margin: 0 auto;
+    height: 50px; ;
+  
+  }
+  .intro-heading-text-uppercase
+  {
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 3%;
+  }
+  
+  #btn1{
+  display: inline-block;
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-right: 2%;
+  font-size: 25px;
+  background-color:#ed553b;
+  }
+  
+  .col-md-4{
+    color: #056583;
+  }
+
+  .heading-dstore
+  {
+    display: inline-block;
+  color: white;
+  font-family: 'Righteous', serif;
+  font-size: 6em; 
+  text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+  margin-top: -5%;
+  }
+
+@keyframes shad-anim {
+  0% {background-position: 0 0}
+  0% {background-position: 100% -100%}
+  }
+
+
+  .btn-three {
+    transition: all 0.5s;
+    position: relative;
+  }
+  .btn-three::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.3s;
+  }
+  .btn-three:hover::before {
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+  }
+  .btn-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(1.2,1.2);
+  }
+  .btn-three:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+  }

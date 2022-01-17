@@ -1,0 +1,209 @@
+@import url(https://fonts.googleapis.com/css?family=Chewy);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left; 
+  margin-top: -5%;
+    width: 100%;
+    height: 115vh;
+    background-image: url("./Polygon Luminary.svg") ;
+    background-size: 100% 100%;
+    overflow:hidden;
+  }
+
+  
+  /*background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background: linear-gradient(-45deg, #0e0e18, #020203, #07070e, #0f0f11);
+  background-size: 400% 400%
+    animation: Gradient 15s ease infinite;*/
+/* h1,h2,h3,h4,h5,h6,label,span {
+  font-weight: 500;
+  font-family: 'Fira Sans', sans-serif;
+} */
+
+.auth-inner {
+  width: 30%;
+  margin: auto;
+  background: #fffffffd;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 30px 55px 30px 55px;
+  border-radius: 25px;
+  margin-top: 1%;
+}
+
+#sign{
+  font-weight: bold;
+  font-family: 'Pacifico';
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 5px;
+}
+
+#label
+{
+  font-weight: bold;
+  color: black;
+  font-family: 'Pacifico';
+  font-size: 1.2rem;
+}
+
+.h4-auth-or{
+  
+  margin-top: -3%;
+  margin-bottom: 5%;
+  font-family: 'Pacifico';
+  color: #c71f19;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+}
+
+.h4-auth-or:before,
+.h4-auth-or:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 2px solid #000;
+  margin: auto;
+}
+
+.auth-wrapper .form-control:focus {
+  border-color: #167bff;
+  box-shadow: none;
+}
+
+.row-auth{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  max-width: 90%;
+  justify-content: center;
+  margin: auto;
+}
+
+.row-auth input{
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  font-family: 'Garamond';
+  font-weight: bold;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+  box-shadow: inset 0px -3px 0px 0px rgba(187,187,187,0.2);
+  transition: box-shadow 0.2s ease-in;
+  margin-bottom: 1%;
+}
+
+.row-auth input:focus{
+   box-shadow: inset 0px -3px 0px 0px rgba(74, 23, 192, 0.7);
+   outline: none;
+}
+
+.row-auth input::-webkit-input-placeholder{
+  opacity: 1;
+  transition: opacity 0.25s ease-out;
+}
+
+.row-auth input:hover::-webkit-input-placeholder,
+.row-auth input:focus::-webkit-input-placeholder{
+  opacity: 0;
+}
+
+.row-auth label{
+  align-self: start;
+  
+  padding-bottom: 0.3rem;
+  color: rgba(187,187,187,0.9);
+}
+
+.row-auth button{
+  border-radius: 15px;
+  width: 200px;
+  height: 40px;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 700;
+  background: rgb(34,193,195);
+  background: linear-gradient(90deg, rgb(135, 44, 240) 0%,rgba(224, 31, 89, 0.849) 100%);
+  border: 0px;
+  cursor: pointer;
+  transition: opacity 0.25s ease-out;
+}
+
+.row-auth button:hover{
+  opacity: 0.8;
+}
+
+.metabutton
+{
+  border-radius: 15px;
+  width: 100%;
+  height: 60px;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 700;
+  background: rgb(34,193,195);
+  
+  background: linear-gradient(90deg, rgb(226, 17, 17) 0%,     rgb(43, 103, 192) 100%);
+  border: 0px;
+  cursor: pointer;
+  transition: opacity 0.25s ease-out;
+  margin-bottom: 10%;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.svg_dstore {
+    display: block;
+    font: 9.5em 'Montserrat';
+    width: 600px;
+    height: 250px;
+    margin: 0 auto;
+    font-weight: 1000%;
+    margin-top: 1%;
+    margin-bottom: -3%;
+}
+
+.text-copy-auth {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy-auth:nth-child(1){
+	stroke: #4D163D;
+	animation-delay: -1;
+}
+
+.text-copy-auth:nth-child(2){
+	stroke: #840037;
+	animation-delay: -2s;
+}
+
+.text-copy-auth:nth-child(3){
+	stroke: #BD0034;
+	animation-delay: -3s;
+}
+
+.text-copy-auth:nth-child(4){
+	stroke: #BD0034;
+	animation-delay: -4s;
+}
+
+.text-copy-auth:nth-child(5){
+	stroke: #FDB731;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}

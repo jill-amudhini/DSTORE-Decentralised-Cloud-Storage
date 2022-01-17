@@ -1,0 +1,32 @@
+.btn {
+    background: tomato;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 16px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: 0.3s all ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+  }
+  
+  .btn:hover {
+    background: whitesmoke;
+    color: tomato;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .btn span {
+    margin-left: 0.7rem;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .btn span {
+      display: none;
+    }
+  }

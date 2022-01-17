@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Poppins:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
+}
+
+.Home,
+.Resources,
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  font-size: 4rem;
+}
+
+
+.Authenticate
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.StoreHouse,
+.Contact,
+.Dashboard
+{
+  justify-content: center;
+  align-items: center;
+}

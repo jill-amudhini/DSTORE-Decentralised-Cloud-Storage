@@ -1,0 +1,69 @@
+body {
+  font-size: 1.1rem;
+  font-family: 'Arial';
+  }
+
+  table {
+    font-family: 'Arial';
+    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #eee;
+    border-bottom: 2px solid #1357A6;
+  }
+  table tr:hover {
+    background: #f4f4f4;
+  }
+  table tr:hover td {
+    color: #555;
+  }
+  table th, table td {
+    color: #999;
+    border: 1px solid #eee;
+    padding: 12px 35px;
+    border-collapse: collapse;
+  }
+  table th {
+    background: linear-gradient(to right, #1e9dd3, #4481eb, #3f86ed);
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  table th.last {
+    border-right: none;
+  }
+
+  .btn-hover {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 30px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+
+    border-radius: 30px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+  
